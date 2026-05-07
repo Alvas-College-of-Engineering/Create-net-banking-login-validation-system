@@ -1,0 +1,243 @@
+/* ── BharatBank Net Banking – style.css ─────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: #f4f1ec;
+  color: #1a2744;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ──────────────────────────────────────────────────────── */
+.bank-header {
+  background: #1a2744;
+  color: #c8a96e;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 2px solid #c8a96e;
+  flex-shrink: 0;
+}
+.bank-logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  color: #c8a96e;
+}
+.bank-tagline {
+  font-size: 10px;
+  color: #9aabb8;
+  letter-spacing: 1.5px;
+  flex: 1;
+}
+.logout-btn {
+  background: transparent;
+  border: 1px solid #c8a96e;
+  color: #c8a96e;
+  padding: 6px 18px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+.logout-btn:hover { background: rgba(200,169,110,0.15); }
+
+/* ── Footer ──────────────────────────────────────────────────────── */
+.bank-footer {
+  background: #1a2744;
+  color: #6b7c93;
+  text-align: center;
+  font-size: 11px;
+  padding: 14px;
+  letter-spacing: 0.5px;
+  margin-top: auto;
+}
+
+/* ── Login page ──────────────────────────────────────────────────── */
+.page-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.login-card {
+  background: #fff;
+  border: 1px solid #d4c9b0;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 32px rgba(26,39,68,0.12);
+}
+.login-card-header {
+  background: #1a2744;
+  color: #c8a96e;
+  padding: 22px 28px 16px;
+  border-bottom: 1px solid #c8a96e;
+}
+.login-card-header h2 {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.login-card-header p {
+  font-size: 11px;
+  color: #9aabb8;
+  margin-top: 5px;
+}
+.login-card-body { padding: 28px; }
+
+/* Attempt dots */
+.attempts-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+.attempt-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #c8a96e;
+  flex-shrink: 0;
+}
+.attempt-dot.used { background: #e24b4a; }
+.attempts-label { font-size: 11px; color: #9aabb8; margin-left: 4px; }
+
+/* Form */
+.field { margin-bottom: 16px; }
+.field label {
+  display: block;
+  font-size: 10px;
+  color: #6b7280;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.field input[type="text"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #1a2744;
+  background: #fafaf8;
+  font-family: 'Georgia', serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.field input:focus {
+  border-color: #1a2744;
+  box-shadow: 0 0 0 2px rgba(26,39,68,0.08);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #1a2744;
+  color: #c8a96e;
+  border: none;
+  border-radius: 2px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.2s;
+  font-family: 'Georgia', serif;
+}
+.login-btn:hover { background: #243561; }
+
+.error-msg {
+  background: #fcebeb;
+  border: 1px solid #f09595;
+  border-radius: 2px;
+  color: #a32d2d;
+  font-size: 12px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+.lockout-msg {
+  background: #faeeda;
+  border: 1px solid #fac775;
+  border-radius: 2px;
+  color: #633806;
+  font-size: 13px;
+  padding: 16px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* ── Dashboard ───────────────────────────────────────────────────── */
+.dashboard-wrap { flex: 1; padding: 24px 32px; }
+
+.welcome-strip {
+  background: #1a2744;
+  color: #c8a96e;
+  padding: 16px 24px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #2c3d6b;
+}
+.welcome-name { font-size: 16px; letter-spacing: 1px; }
+.welcome-acno { font-size: 11px; color: #9aabb8; margin-top: 4px; }
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.info-card {
+  background: #fff;
+  border: 1px solid #d4c9b0;
+  border-radius: 4px;
+  padding: 18px 22px;
+}
+.ic-label { font-size: 10px; color: #9aabb8; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+.ic-value { font-size: 22px; color: #1a2744; }
+.ic-value.balance { color: #0f5c44; }
+.ic-value.status-active { font-size: 16px; color: #0f5c44; }
+.ic-sub { font-size: 11px; color: #9aabb8; margin-top: 4px; }
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.menu-tile {
+  background: #fff;
+  border: 1px solid #d4c9b0;
+  border-radius: 4px;
+  padding: 20px 16px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.menu-tile:hover { border-color: #1a2744; background: #f0ece4; }
+.tile-icon { font-size: 18px; color: #c8a96e; margin-bottom: 8px; }
+.tile-label { font-size: 12px; color: #1a2744; letter-spacing: 0.5px; margin-bottom: 10px; font-weight: bold; }
+.tile-detail { font-size: 12px; color: #6b7280; line-height: 1.6; }
+.coming-soon { color: #b4b2a9; font-style: italic; }
+
+/* Mini statement table */
+.stmt-table { width: 100%; border-collapse: collapse; }
+.stmt-table td { padding: 2px 0; vertical-align: top; }
+.stmt-date { color: #9aabb8; font-size: 10px; width: 42px; padding-right: 4px; }
+.stmt-desc { font-size: 11px; color: #6b7280; }
+.stmt-amt { font-size: 11px; text-align: right; white-space: nowrap; }
+.stmt-amt.credit { color: #0f5c44; }
+.stmt-amt.debit  { color: #a32d2d; }
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .cards-grid, .menu-grid { grid-template-columns: 1fr; }
+  .dashboard-wrap { padding: 16px; }
+  .bank-header { padding: 12px 16px; }
+}
